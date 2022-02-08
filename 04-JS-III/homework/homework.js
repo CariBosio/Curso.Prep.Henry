@@ -101,7 +101,7 @@ function numeroMasGrande(numeros) {
     // Devuelve el número más grande
     // Tu código:
     var maximo = numeros[0];
-    for (var i = 1; i < numeros.lenght; i++) {
+    for (var i = 1; i < numeros.length; i++) {
         if (numeros[i] > maximo) {
             maximo = numeros[i];
         }
@@ -129,9 +129,9 @@ function cuentoElementos(arreglo) {
     //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
     //Escribe tu código aquí
     let contador = 0;
-    for (var i = 0; i < arreglo.lenght; i++) {
+    for (let i = 0; i < arreglo.length; i++) {
         if (arreglo[i] > 18) {
-            contador++
+            contador++;
         }
     }
     return contador;
@@ -168,9 +168,11 @@ function todosIguales(arreglo) {
     //Escribe tu código aquí  
     for (var i = 0; i < arreglo.length - 1; i++) {
         if (arreglo[i] !== arreglo[i + 1]) {
+            return false;
 
         }
     }
+    return true;
 }
 
 
@@ -185,7 +187,7 @@ function mesesDelAño(array) {
             nuevoArray.push(array[i]);
         }
     }
-    if (nuevoArray.lenght < 3) {
+    if (nuevoArray.length < 3) {
         return "No se encontraron los meses pedidos";
     } else {
         return nuevoArray;
